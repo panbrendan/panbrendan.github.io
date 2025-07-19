@@ -21,7 +21,7 @@ fetch('data/photos.json')
         link.setAttribute('data-title', name);
 
         const img = document.createElement('img');
-        img.src = `images/${directory}/thumbnails/${filename}`;
+        img.src = `images/${directory}/${filename}`;
         img.alt = filename;
 
         link.appendChild(img);
