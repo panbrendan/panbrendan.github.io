@@ -1,0 +1,19 @@
+[
+  {
+    "name": "2024",
+    "directory": "2024",
+    "photos": [
+      "sunset.jpg",
+      "lake_needwood.jpg",
+      "christmas_church_xcaret.jpg"
+    ]
+  },
+  {
+    "name": "2025",
+    "directory": "2025",
+    "photos": [
+      "waterlily.jpg",
+      "dragonfly.jpg"
+    ]
+  }
+]
