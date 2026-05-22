@@ -243,11 +243,11 @@ body {
   align-items: start;
 }
 
-.about-left h2 {
+.about-left h3 {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 300;
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  line-height: 1.05;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.1;
   letter-spacing: 0.01em;
   color: var(--text);
 }
@@ -363,7 +363,7 @@ body {
 
 /* ── Photography ─────────────────────────────────────── */
 
-.section-photography .section-title { margin-bottom: 20px; }
+.section-title + .filter-nav { margin-top: -20px; }
 
 .filter-nav {
   display: flex;
@@ -573,6 +573,7 @@ body {
 footer {
   text-align: center;
   padding: 28px 24px;
+  border-top: 1px solid var(--border);
   font-size: 0.68rem;
   color: var(--text-muted);
   letter-spacing: 0.08em;
