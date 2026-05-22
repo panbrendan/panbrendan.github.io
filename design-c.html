@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design C — Bold Editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#ffffff;--text:#0a0a0a;--muted:#888;--accent:#d94f3d;--border:#e8e8e8;--gap:10px}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:300}
+
+.label{position:fixed;top:12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;padding:5px 14px;border-radius:100px;z-index:999;font-family:'Inter',sans-serif;font-weight:400}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:100;background:#fff;border-bottom:2px solid var(--text)}
+.nav-logo{font-family:'Inter',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;color:var(--text)}
+nav ul{display:flex;list-style:none;gap:0}
+nav li a{font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);text-decoration:none;padding:18px 20px;display:block;border-left:1px solid var(--border);transition:background 0.15s,color 0.15s}
+nav li:last-child a{border-right:1px solid var(--border)}
+nav a:hover{background:var(--text);color:#fff}
+
+/* Hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding:54px 0 0;border-bottom:2px solid var(--text)}
+.hero-left{padding:64px 48px;display:flex;flex-direction:column;justify-content:space-between;border-right:2px solid var(--text)}
+.hero-eyebrow{font-size:0.65rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:auto}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(5rem,9vw,8rem);line-height:0.88;letter-spacing:-0.01em;margin:auto 0}
+.hero-sub{font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-top:auto;padding-top:32px;border-top:1px solid var(--border)}
+.hero-right{padding:64px 48px;display:flex;flex-direction:column;justify-content:flex-end;background:#fafafa}
+.hero-right p{font-size:1.05rem;line-height:1.75;color:#555;margin-bottom:40px;max-width:340px}
+.hero-cta{display:inline-flex;align-items:center;gap:12px;background:var(--text);color:#fff;font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;padding:14px 28px;transition:background 0.2s}
+.hero-cta:hover{background:var(--accent)}
+.hero-accent-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;margin-right:4px}
+
+/* About */
+.about{border-bottom:2px solid var(--text)}
+.about-inner{display:grid;grid-template-columns:300px 1fr;align-items:stretch}
+.about-sidebar{padding:56px 40px;border-right:2px solid var(--text);display:flex;flex-direction:column;gap:8px}
+.about-sidebar .num{font-size:3rem;font-weight:700;color:var(--border);line-height:1}
+.about-sidebar .section-id{font-size:0.65rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)}
+.about-main{padding:56px 56px}
+.about-main h2{font-size:2.4rem;font-weight:700;line-height:1.1;margin-bottom:32px;letter-spacing:-0.02em}
+.about-main h2 span{color:var(--accent)}
+.about-main p{font-size:0.9rem;line-height:1.85;color:#555;margin-bottom:16px;max-width:580px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chip{font-size:0.62rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);border:2px solid var(--text);padding:5px 14px;transition:background 0.15s,color 0.15s}
+.chip:hover{background:var(--text);color:#fff}
+
+/* Photos */
+.photos{padding:56px 40px}
+.photos-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px;padding-bottom:16px;border-bottom:2px solid var(--text)}
+.photos-header h2{font-size:2rem;font-weight:700;letter-spacing:-0.02em}
+.photos-header span{font-size:0.65rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.grid{columns:4 220px;column-gap:var(--gap)}
+.grid-item{break-inside:avoid;margin-bottom:var(--gap);overflow:hidden;position:relative}
+.grid-item img{width:100%;height:auto;display:block;transition:transform 0.4s ease}
+.grid-item:hover img{transform:scale(1.04)}
+.grid-item::after{content:'';position:absolute;inset:0;border:0px solid var(--accent);transition:border-width 0.2s}
+.grid-item:hover::after{border-width:3px}
+</style>
+</head>
+<body>
+<div class="label">C — Bold Editorial</div>
+<nav>
+  <a href="#" class="nav-logo"><span class="hero-accent-dot"></span>Brendan Pan</a>
+  <ul>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Photography</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Personal Site &nbsp;&mdash;&nbsp; 2025</p>
+    <h1>Bren&shy;dan<br>Pan</h1>
+    <p class="hero-sub">Engineer &nbsp;&middot;&nbsp; Photographer &nbsp;&middot;&nbsp; Hobbyist</p>
+  </div>
+  <div class="hero-right">
+    <p>Building software, capturing moments, and always finding something new to be obsessed with.</p>
+    <a href="#" class="hero-cta">View Work &nbsp;&#8594;</a>
+  </div>
+</section>
+<section>
+  <div class="about">
+    <div class="about-inner">
+      <div class="about-sidebar">
+        <div class="num">01</div>
+        <div class="section-id">About</div>
+      </div>
+      <div class="about-main">
+        <h2>A lot of interests,<br><span>not enough hours.</span></h2>
+        <p>Hi, I&rsquo;m Brendan &mdash; an engineering manager with way too many hobbies. Gaming, anime, AI, tennis, pickleball, card games, board games, violin, travel, and photography all compete for my attention.</p>
+        <p>I share my home with my wife and two cats, Yuna and Leo, who are deeply unimpressed by all of it.</p>
+        <div class="chips">
+          <span class="chip">Gaming</span><span class="chip">Anime</span><span class="chip">Tennis</span>
+          <span class="chip">Pickleball</span><span class="chip">AI</span><span class="chip">Travel</span>
+          <span class="chip">Violin</span><span class="chip">Spicy Food</span><span class="chip">Board Games</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="photos">
+    <div class="photos-header">
+      <h2>Photography</h2>
+      <span>02 &nbsp;/&nbsp; Gallery</span>
+    </div>
+    <div class="grid">
+      <div class="grid-item"><img src="images/2024/sunset.jpg" alt="sunset" loading="lazy"></div>
+      <div class="grid-item"><img src="images/2025/waterlily.jpg" alt="waterlily" loading="lazy"></div>
+      <div class="grid-item"><img src="images/2024/lake_needwood.jpg" alt="lake" loading="lazy"></div>
+      <div class="grid-item"><img src="images/2025/dragonfly.jpg" alt="dragonfly" loading="lazy"></div>
+      <div class="grid-item"><img src="images/2024/christmas_church_xcaret.jpg" alt="church" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
