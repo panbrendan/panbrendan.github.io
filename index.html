@@ -3,24 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brendan Pan — Photography</title>
+  <title>Brendan Pan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Brendan Pan</h1>
-    <p class="tagline">A collection of moments</p>
-    <nav class="filter-nav" id="filter-nav">
-      <button class="filter-btn active" data-filter="all">All</button>
-    </nav>
-  </header>
+  <nav id="nav">
+    <a href="#hero" class="nav-logo">Brendan Pan</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#photography">Photography</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <main id="gallery"></main>
+  <!-- Hero -->
+  <section id="hero" class="section-hero">
+    <div class="hero-content">
+      <h1>Brendan Pan</h1>
+      <p class="hero-sub">Engineer &nbsp;&middot;&nbsp; Photographer &nbsp;&middot;&nbsp; Collector of Hobbies</p>
+      <p class="hero-desc">Building software, capturing moments, and always finding something new to be obsessed with.</p>
+    </div>
+    <a href="#about" class="hero-scroll" aria-label="Scroll down">scroll</a>
+  </section>
 
+  <!-- About -->
+  <section id="about" class="section section-about">
+    <div class="section-inner">
+      <h2 class="section-title">About</h2>
+      <div class="about-body">
+        <p>Hi, I&rsquo;m Brendan &mdash; an engineering manager with way too many hobbies and not nearly enough hours in the day. By trade I work in tech, but my interests sprawl pretty far beyond the keyboard: gaming, anime, AI development, card games, board games, tennis, pickleball, and a violin that deserves more practice than it gets.</p>
+        <p>I travel whenever I can, eat spicy food at every opportunity, and spend a suspicious amount of time watching my two cats &mdash; Yuna and Leo &mdash; do absolutely nothing productive. This site is a place to collect some of what I make and where I go.</p>
+      </div>
+      <ul class="interest-list">
+        <li>Gaming &amp; Anime</li>
+        <li>Tennis &amp; Pickleball</li>
+        <li>Photography</li>
+        <li>AI &amp; Engineering</li>
+        <li>Travel</li>
+        <li>Violin</li>
+        <li>Card &amp; Board Games</li>
+        <li>Spicy Food</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section section-projects">
+    <div class="section-inner">
+      <h2 class="section-title">Projects</h2>
+      <div id="project-grid" class="project-grid"></div>
+    </div>
+  </section>
+
+  <!-- Photography -->
+  <section id="photography" class="section section-photography">
+    <div class="section-inner">
+      <h2 class="section-title">Photography</h2>
+      <nav class="filter-nav" id="filter-nav">
+        <button class="filter-btn active" data-filter="all">All</button>
+      </nav>
+      <div id="gallery"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-contact">
+    <div class="section-inner">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-sub">Always happy to chat &mdash; reach out.</p>
+      <div class="contact-links">
+        <a href="mailto:panbrendan@gmail.com" class="contact-link">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">panbrendan@gmail.com</span>
+        </a>
+        <a href="https://github.com/panbrendan" class="contact-link" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/panbrendan</span>
+        </a>
+        <a href="https://www.linkedin.com/in/brpan/" class="contact-link" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/brpan</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Brendan Pan &nbsp;&middot;&nbsp; Yuna &amp; Leo approved</p>
+  </footer>
+
+  <!-- Lightbox -->
   <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
     <button class="lb-close" aria-label="Close lightbox">&times;</button>
     <button class="lb-prev" aria-label="Previous photo">&#8592;</button>
@@ -31,10 +111,7 @@
     </div>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Brendan Pan &mdash; hosted on GitHub Pages</p>
-  </footer>
-
+  <script src="js/main.js"></script>
   <script src="js/gallery.js"></script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Project Name",
+    "description": "A short description of what this project does, the problem it solves, or what makes it interesting.",
+    "tags": ["JavaScript", "Node.js"],
+    "github": "https://github.com/panbrendan",
+    "url": null
+  },
+  {
+    "name": "Project Name",
+    "description": "A short description of what this project does, the problem it solves, or what makes it interesting.",
+    "tags": ["Python", "API"],
+    "github": "https://github.com/panbrendan",
+    "url": null
+  },
+  {
+    "name": "Project Name",
+    "description": "A short description of what this project does, the problem it solves, or what makes it interesting.",
+    "tags": ["React", "TypeScript"],
+    "github": "https://github.com/panbrendan",
+    "url": null
+  }
+]
