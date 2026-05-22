@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design D — Clean Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f3f3f0;--surface:#ebebea;--text:#111;--muted:#888;--dim:#bbb;--border:#d8d8d4;--green:#3d7a5f;--gap:8px}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:300}
+
+.label{position:fixed;top:12px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;padding:5px 14px;border-radius:100px;z-index:999;font-family:'JetBrains Mono',monospace}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;z-index:100;background:rgba(243,243,240,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'JetBrains Mono',monospace;font-weight:400;font-size:0.82rem;letter-spacing:0.03em;text-decoration:none;color:var(--text)}
+.nav-logo .cursor{display:inline-block;width:8px;height:14px;background:var(--green);margin-left:1px;vertical-align:middle;animation:blink 1.2s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+nav ul{display:flex;list-style:none;gap:6px}
+nav a{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:4px;transition:background 0.15s,color 0.15s;letter-spacing:0.03em}
+nav a:hover{background:var(--surface);color:var(--text)}
+
+/* Hero */
+.hero{min-height:100vh;padding:52px 40px 80px;display:flex;flex-direction:column;justify-content:center}
+.hero-inner{max-width:900px}
+.hero-prompt{font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--green);margin-bottom:24px;opacity:0.8}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(4rem,9vw,7.5rem);line-height:0.92;letter-spacing:0.01em;margin-bottom:36px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:0;margin-bottom:36px;border:1px solid var(--border);background:var(--surface);border-radius:6px;overflow:hidden;max-width:540px}
+.meta-item{padding:12px 20px;display:flex;flex-direction:column;gap:3px;border-right:1px solid var(--border);flex:1}
+.meta-item:last-child{border-right:none}
+.meta-key{font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--dim);letter-spacing:0.08em;text-transform:uppercase}
+.meta-val{font-size:0.78rem;color:var(--text);font-weight:400}
+.hero-desc{font-size:0.92rem;color:var(--muted);max-width:420px;line-height:1.75}
+
+/* About */
+.about{padding:72px 40px;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.about-inner{max-width:900px;margin:0 auto}
+.section-tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--green);margin-bottom:24px;letter-spacing:0.03em}
+.about h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:2.8rem;margin-bottom:28px;letter-spacing:0.01em}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about p{font-size:0.875rem;line-height:1.85;color:#666;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--muted);border:1px solid var(--border);background:var(--bg);border-radius:3px;padding:4px 10px;transition:border-color 0.2s,color 0.2s}
+.chip:hover{border-color:var(--green);color:var(--green)}
+
+/* Photos */
+.photos{padding:72px 40px}
+.photos-inner{max-width:1200px;margin:0 auto}
+.photos-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+.photos-header .tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--green)}
+.photos-header h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:2rem;letter-spacing:0.01em}
+.photos-header .count{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--dim)}
+.grid{columns:4 220px;column-gap:var(--gap)}
+.grid-item{break-inside:avoid;margin-bottom:var(--gap);overflow:hidden;border-radius:4px;border:1px solid var(--border);background:var(--surface)}
+.grid-item img{width:100%;height:auto;display:block;transition:transform 0.4s ease,filter 0.3s}
+.grid-item:hover img{transform:scale(1.04);filter:brightness(1.05)}
+</style>
+</head>
+<body>
+<div class="label">D — Clean Tech</div>
+<nav>
+  <a href="#" class="nav-logo">brendan.pan<span class="cursor"></span></a>
+  <ul>
+    <li><a href="#">about</a></li>
+    <li><a href="#">projects</a></li>
+    <li><a href="#">photography</a></li>
+    <li><a href="#">contact</a></li>
+  </ul>
+</nav>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-prompt">~/brendan-pan $&nbsp;<span style="color:#111">whoami</span></div>
+    <h1>Brendan<br>Pan</h1>
+    <div class="hero-meta">
+      <div class="meta-item"><span class="meta-key">role</span><span class="meta-val">Eng. Manager</span></div>
+      <div class="meta-item"><span class="meta-key">location</span><span class="meta-val">United States</span></div>
+      <div class="meta-item"><span class="meta-key">cats</span><span class="meta-val">Yuna &amp; Leo</span></div>
+    </div>
+    <p class="hero-desc">Building software, capturing moments, and always finding something new to be obsessed with.</p>
+  </div>
+</section>
+<section>
+  <div class="about">
+    <div class="about-inner">
+      <div class="section-tag">// about</div>
+      <h2>A lot of interests, not enough hours.</h2>
+      <div class="about-grid">
+        <div>
+          <p>Hi, I&rsquo;m Brendan &mdash; an engineering manager with way too many hobbies. Gaming, anime, AI, tennis, pickleball, card games, board games, violin, travel, and photography all compete for my attention.</p>
+          <p>I share my home with my wife and two cats, Yuna and Leo, who are deeply unimpressed by all of it.</p>
+        </div>
+        <div class="chips">
+          <span class="chip">gaming</span><span class="chip">anime</span><span class="chip">tennis</span>
+          <span class="chip">pickleball</span><span class="chip">ai/ml</span><span class="chip">travel</span>
+          <span class="chip">violin</span><span class="chip">spicy food</span><span class="chip">board games</span>
+          <span class="chip">card games</span><span class="chip">photography</span><span class="chip">engineering</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="photos">
+    <div class="photos-inner">
+      <div class="photos-header">
+        <div>
+          <div class="tag">// photography</div>
+          <h2>Gallery</h2>
+        </div>
+        <span class="count">5 photos</span>
+      </div>
+      <div class="grid">
+        <div class="grid-item"><img src="images/2024/sunset.jpg" alt="sunset" loading="lazy"></div>
+        <div class="grid-item"><img src="images/2025/waterlily.jpg" alt="waterlily" loading="lazy"></div>
+        <div class="grid-item"><img src="images/2024/lake_needwood.jpg" alt="lake" loading="lazy"></div>
+        <div class="grid-item"><img src="images/2025/dragonfly.jpg" alt="dragonfly" loading="lazy"></div>
+        <div class="grid-item"><img src="images/2024/christmas_church_xcaret.jpg" alt="church" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
