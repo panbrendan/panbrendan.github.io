@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brendan Pan</title>
+  <title>Photography &mdash; Brendan Pan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -24,20 +24,29 @@
     </ul>
   </nav>
 
-  <section class="section-hero">
-    <div class="hero-content">
-      <h1>Brendan<br><em>Pan</em></h1>
-      <div class="hero-rule"></div>
-      <p class="hero-sub">Engineer &nbsp;&middot;&nbsp; Photographer &nbsp;&middot;&nbsp; Collector of Hobbies</p>
-      <p class="hero-desc">Building software, capturing moments, and always finding something new to be obsessed with.</p>
+  <main class="page-main page-main--wide">
+    <h2 class="section-title">Photography</h2>
+    <nav class="filter-nav" id="filter-nav">
+      <button class="filter-btn active" data-filter="all">All</button>
+    </nav>
+    <div id="gallery"></div>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="lb-close" aria-label="Close lightbox">&times;</button>
+    <button class="lb-prev" aria-label="Previous photo">&#8592;</button>
+    <button class="lb-next" aria-label="Next photo">&#8594;</button>
+    <div class="lb-content">
+      <img id="lb-img" src="" alt="">
+      <p id="lb-caption"></p>
     </div>
-    <a href="about.html" class="hero-scroll" aria-label="Learn more">scroll</a>
-  </section>
+  </div>
 
   <footer>
     <p>&copy; 2025 Brendan Pan &nbsp;&middot;&nbsp; Yuna &amp; Leo approved</p>
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
 </body>
 </html>

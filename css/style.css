@@ -555,6 +555,19 @@ body {
 .lb-prev  { left: 20px;  top: 50%; transform: translateY(-50%); font-size: 1.75rem; }
 .lb-next  { right: 20px; top: 50%; transform: translateY(-50%); font-size: 1.75rem; }
 
+/* ── Page layout (non-hero pages) ───────────────────── */
+
+.page-main {
+  max-width: var(--inner);
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + 64px) 48px 96px;
+  min-height: 100vh;
+}
+
+.page-main--wide {
+  max-width: 1440px;
+}
+
 /* ── Footer ──────────────────────────────────────────── */
 
 footer {
@@ -569,6 +582,8 @@ footer {
 
 @media (max-width: 860px) {
   :root { --pad: 72px; }
+
+  .page-main { padding: calc(var(--nav-h) + 48px) 24px 72px; }
 
   #nav { padding: 0 24px; }
 
@@ -607,6 +622,8 @@ footer {
 
 @media (max-width: 520px) {
   :root { --pad: 56px; }
+
+  .page-main { padding: calc(var(--nav-h) + 32px) 16px 56px; }
 
   .section { padding: var(--pad) 16px; }
 
