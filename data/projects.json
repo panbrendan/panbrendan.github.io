@@ -50,7 +50,7 @@
   {
     "name": "CatDex",
     "featured": true,
-    "kind": "iOS & Android app",
+    "kind": "iOS app",
     "year": "2026",
     "tagline": "Identify and collect every cat breed.",
     "description": "A Pokédex for cats. Point your camera at any cat, or pick a photo, and AI identifies the breed with a confidence rating and a fun fact. Every breed you find joins your collection; the other 67+ stay as silhouettes until you spot one in the wild.",
@@ -62,7 +62,9 @@
     "tags": ["Expo", "React Native", "TypeScript", "Vercel", "Claude API"],
     "image": "images/projects/catdex.jpg",
     "imageAlt": "CatDex: a glowing red cat outline beside the app name",
-    "links": []
+    "links": [
+      { "label": "App Store", "url": "https://apps.apple.com/us/app/catdex/id6763668527" }
+    ]
   },
   {
     "name": "Buzzword vs. Share Price",
