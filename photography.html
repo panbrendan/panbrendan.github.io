@@ -4,39 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photography | Brendan Pan</title>
+  <meta name="description" content="Photos by Brendan Pan.">
+  <meta name="theme-color" content="#f6f1e9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14120f" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231d1a16'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-style='italic' font-size='17' fill='%23f6f1e9' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <nav id="nav">
-    <a href="index.html" class="nav-logo">Brendan Pan</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="photography.html">Photography</a></li>
-      <li><a href="cats.html">Cats</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="wrap nav-inner">
+      <a href="index.html" class="nav-logo"><span class="nav-mark">B</span>Brendan Pan</a>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="cats.html">Cats</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
   </nav>
 
-  <main class="page-main">
-    <h2 class="section-title">Photography</h2>
-    <nav class="filter-nav" id="filter-nav">
-      <button class="filter-btn active" data-filter="all">All</button>
-    </nav>
-    <div id="gallery"></div>
+  <main>
+    <header class="wrap page-head">
+      <p class="eyebrow"><span class="dot"></span>Photography</p>
+      <h1>Through the <em>lens.</em></h1>
+      <p>Places I&rsquo;ve been, and things that held still long enough. Click any photo to see it full size.</p>
+    </header>
+
+    <div class="wrap">
+      <nav class="filter-nav" id="filter-nav" aria-label="Filter albums">
+        <button class="filter-btn active" data-filter="all">All</button>
+      </nav>
+      <div id="gallery"></div>
+    </div>
   </main>
 
   <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
     <button class="lb-close" aria-label="Close lightbox">&times;</button>
-    <button class="lb-prev" aria-label="Previous photo">&#8592;</button>
-    <button class="lb-next" aria-label="Next photo">&#8594;</button>
+    <button class="lb-prev" aria-label="Previous photo">&larr;</button>
+    <button class="lb-next" aria-label="Next photo">&rarr;</button>
     <div class="lb-content">
       <img id="lb-img" src="" alt="">
       <p id="lb-caption"></p>
@@ -44,7 +61,14 @@
   </div>
 
   <footer>
-    <p>&copy; 2025 Brendan Pan &nbsp;&middot;&nbsp; Yuna &amp; Leo approved</p>
+    <div class="wrap footer-inner">
+      <p>&copy; 2026 Brendan Pan &nbsp;&middot;&nbsp; Yuna &amp; Leo approved</p>
+      <ul class="footer-links">
+        <li><a href="mailto:panbrendan@gmail.com">Email</a></li>
+        <li><a href="https://github.com/panbrendan" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/brpan/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>

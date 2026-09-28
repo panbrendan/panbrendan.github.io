@@ -1,16 +1,89 @@
 [
   {
-    "name": "E-Plant Shopping",
-    "description": "An e-commerce app for browsing and purchasing plants, with a shopping cart and product catalog.",
-    "tags": ["React", "JavaScript"],
-    "github": null,
-    "url": "https://panbrendan.github.io/e-plantShopping/"
+    "name": "Kinma",
+    "featured": true,
+    "kind": "iOS & Android app",
+    "year": "2026",
+    "tagline": "A pet that eats what you eat.",
+    "description": "A tamagotchi you feed with photos of your real meals, and that grows more sociable when you actually eat with friends. Snap a meal and Claude vision identifies the dish and cuisine; start a table and friends join with a QR code. The pet never dies and food is never scored healthy or unhealthy. It just rewards variety and company.",
+    "highlights": [
+      "Two growth axes: solo meals build Nourishment, shared tables build Sociability",
+      "Pet evolution, a Closet of accessories, and a two-shade LCD retro art mode",
+      "Deferred deep links, push reminders in the pet's voice, and shared table journals"
+    ],
+    "tags": ["Expo", "React Native", "Express", "Postgres", "Claude API"],
+    "image": "images/projects/kinma.jpg",
+    "imageAlt": "Kinma: three round pastel pets on a teal background",
+    "gallery": [
+      { "src": "images/projects/kinma-01-meet.jpg", "alt": "Kinma pet screen" },
+      { "src": "images/projects/kinma-03-table.jpg", "alt": "Starting a shared table with a QR code" },
+      { "src": "images/projects/kinma-07-retro.jpg", "alt": "Retro LCD pixel-art mode" }
+    ],
+    "links": [
+      { "label": "kinma.app", "url": "https://kinma.app" },
+      { "label": "App Store", "url": "https://apps.apple.com/us/app/kinma/id6812021338" }
+    ]
+  },
+  {
+    "name": "Capsule Cove",
+    "featured": true,
+    "kind": "Browser game",
+    "year": "2026",
+    "tagline": "A cozy pixel-art figure-collecting game.",
+    "description": "You've inherited Hoshi's Capsule Nook, a tiny figure shop in a seaside town. Pull capsules, chase every colour variant, and fill your display cases so visitors drop tips in the jar. Every figure is generated procedurally, and there is no framework or engine underneath, just canvas and ES modules.",
+    "highlights": [
+      "Procedural chibi figure generator with auto-shading, outlines, and holo effects",
+      "Four areas to explore: town, Whisper Woods, Sunny Tidepools, and a Star Arcade",
+      "Fishing, digging, a claw machine, shop decorating, and a generative WebAudio lullaby"
+    ],
+    "tags": ["JavaScript", "Canvas", "WebAudio", "Cloudflare Workers"],
+    "image": "images/projects/capsule-cove.jpg",
+    "imagePosition": "center top",
+    "imageAlt": "Capsule Cove: a pixel-art town with the Capsule Nook shop and cherry trees",
+    "gallery": [
+      { "src": "images/projects/capsule-cove-shop.jpg", "alt": "A decorated shop full of figure display cases" }
+    ],
+    "links": [
+      { "label": "Play it", "url": "https://capsulecove.app" }
+    ]
+  },
+  {
+    "name": "CatDex",
+    "featured": true,
+    "kind": "iOS & Android app",
+    "year": "2026",
+    "tagline": "Identify and collect every cat breed.",
+    "description": "A Pokédex for cats. Point your camera at any cat, or pick a photo, and AI identifies the breed with a confidence rating and a fun fact. Every breed you find joins your collection; the other 67+ stay as silhouettes until you spot one in the wild.",
+    "highlights": [
+      "Claude vision breed identification behind a Vercel serverless proxy, so no API key ships in the app",
+      "Breed details covering temperament, lifespan, weight, and origin",
+      "Scan history, milestones, and daily cat-fact notifications"
+    ],
+    "tags": ["Expo", "React Native", "TypeScript", "Vercel", "Claude API"],
+    "image": "images/projects/catdex.jpg",
+    "imageAlt": "CatDex: a glowing red cat outline beside the app name",
+    "links": []
   },
   {
     "name": "Buzzword vs. Share Price",
-    "description": "Interactive data visualization exploring how tech buzzwords correlate with company stock price performance across multiple narrative scenes.",
-    "tags": ["D3.js", "JavaScript", "Data Viz"],
-    "github": null,
-    "url": "https://panbrendan.github.io/416-narrative-viz/"
+    "featured": false,
+    "kind": "Data visualization",
+    "year": "",
+    "description": "An interactive narrative visualization exploring how tech buzzwords correlate with company stock price performance, told across multiple scenes.",
+    "tags": ["D3.js", "JavaScript"],
+    "links": [
+      { "label": "View", "url": "https://panbrendan.github.io/416-narrative-viz/" }
+    ]
+  },
+  {
+    "name": "E-Plant Shopping",
+    "featured": false,
+    "kind": "Web app",
+    "year": "",
+    "description": "An e-commerce storefront for browsing and buying plants, with a product catalog and shopping cart.",
+    "tags": ["React", "JavaScript"],
+    "links": [
+      { "label": "View", "url": "https://panbrendan.github.io/e-plantShopping/" }
+    ]
   }
 ]

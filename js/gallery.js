@@ -31,11 +31,7 @@ function buildFilters(albums) {
 
 function filterAlbums(filter) {
   document.querySelectorAll('.album').forEach(section => {
-    if (filter === 'all' || section.dataset.album === filter) {
-      section.classList.remove('hidden');
-    } else {
-      section.classList.add('hidden');
-    }
+    section.classList.toggle('hidden', filter !== 'all' && section.dataset.album !== filter);
   });
 }
 
@@ -50,37 +46,48 @@ function buildGallery(albums) {
 
     const header = document.createElement('div');
     header.className = 'album-header';
-    header.innerHTML =
-      `<h2 class="album-title">${album.name}</h2>` +
-      `<span class="album-count">${album.photos.length} photo${album.photos.length !== 1 ? 's' : ''}</span>`;
+    const title = document.createElement('h2');
+    title.className = 'album-title';
+    title.textContent = album.name;
+    const count = document.createElement('span');
+    count.className = 'album-count';
+    count.textContent = `${album.photos.length} photo${album.photos.length !== 1 ? 's' : ''}`;
+    header.append(title, count);
 
     const grid = document.createElement('div');
     grid.className = 'photo-grid';
 
     album.photos.forEach(filename => {
       const src = `images/${album.directory}/${filename}`;
+      const thumb = `images/${album.directory}/thumbnails/${filename}`;
       const caption = filename.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ');
       const index = allPhotos.length;
-      allPhotos.push({ src, caption });
+      allPhotos.push({ src, thumb, caption });
 
-      const item = document.createElement('div');
+      const item = document.createElement('button');
       item.className = 'photo-item';
+      item.setAttribute('aria-label', `Open ${caption}`);
 
       const img = document.createElement('img');
       img.alt = caption;
       img.loading = 'lazy';
       img.decoding = 'async';
-      img.src = src;
       img.addEventListener('load', () => img.classList.add('loaded'));
-      if (img.complete) img.classList.add('loaded');
+      // Fall back to the full-size image if no thumbnail was generated
+      img.addEventListener('error', () => { if (img.src.includes('/thumbnails/')) img.src = src; }, { once: true });
+      img.src = thumb;
+      if (img.complete && img.naturalWidth) img.classList.add('loaded');
 
-      item.appendChild(img);
+      const cap = document.createElement('span');
+      cap.className = 'cap';
+      cap.textContent = caption;
+
+      item.append(img, cap);
       item.addEventListener('click', () => openLightbox(index));
       grid.appendChild(item);
     });
 
-    section.appendChild(header);
-    section.appendChild(grid);
+    section.append(header, grid);
     gallery.appendChild(section);
   });
 }
@@ -93,7 +100,7 @@ function initLightbox() {
   document.querySelector('.lb-next').addEventListener('click', () => navigate(1));
 
   lb.addEventListener('click', e => {
-    if (e.target === lb) closeLightbox();
+    if (e.target === lb || e.target.classList.contains('lb-content')) closeLightbox();
   });
 
   document.addEventListener('keydown', e => {
@@ -111,6 +118,7 @@ function openLightbox(index) {
   lb.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
   showPhoto(index);
+  document.querySelector('.lb-close').focus();
 }
 
 function closeLightbox() {
@@ -131,7 +139,13 @@ function navigate(dir) {
 }
 
 function showPhoto(index) {
-  const { src, caption } = allPhotos[index];
-  document.getElementById('lb-img').src = src;
+  const { src, thumb, caption } = allPhotos[index];
+  const img = document.getElementById('lb-img');
+  // Show the thumbnail instantly, then swap in full resolution once loaded
+  img.src = thumb;
+  img.alt = caption;
+  const full = new Image();
+  full.onload = () => { if (allPhotos[currentIndex].src === src) img.src = src; };
+  full.src = src;
   document.getElementById('lb-caption').textContent = caption;
 }
