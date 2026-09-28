@@ -3,66 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yuna &amp; Leo | Brendan Pan</title>
+  <title>Yuna & Leo | Brendan Pan</title>
+  <meta name="description" content="Meet Yuna and Leo, the two cats who actually run the household.">
+  <meta name="theme-color" content="#f6f1e9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14120f" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231d1a16'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-style='italic' font-size='17' fill='%23f6f1e9' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <nav id="nav">
-    <a href="index.html" class="nav-logo">Brendan Pan</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="photography.html">Photography</a></li>
-      <li><a href="cats.html">Cats</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="wrap nav-inner">
+      <a href="index.html" class="nav-logo"><span class="nav-mark">B</span>Brendan Pan</a>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="cats.html">Cats</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
   </nav>
 
-  <main class="page-main">
-    <h2 class="section-title">Yuna &amp; Leo</h2>
+  <main>
+    <header class="wrap page-head">
+      <p class="eyebrow"><span class="dot"></span>The management</p>
+      <h1>Yuna <em>&amp;</em> Leo</h1>
+      <p>The two actual residents of this household. Lei and I mostly just open the cans.</p>
+    </header>
 
-    <div class="cat-grid">
+    <div class="wrap">
+      <article class="cat-profile reveal">
+        <div class="cat-photo"><img src="images/cats/thumbnails/yuna.jpg" alt="Yuna stretched out on the carpet"></div>
+        <div>
+          <p class="eyebrow">The fancy one</p>
+          <h2>Yuna</h2>
+          <dl class="cat-stats">
+            <div><dt>Born</dt><dd>Apr 6, 2021</dd></div>
+            <div><dt>Breed</dt><dd>Tonkinese</dd></div>
+            <div><dt>Coat</dt><dd>Natural mink</dd></div>
+          </dl>
+          <div class="cat-bio">
+            <p>Yuna is a certified fancy cat. Literally. She holds a CFA certificate, which she takes very seriously, and carries herself with the confidence of someone who knows they are objectively beautiful.</p>
+            <p>She is the loudest and most playful cat in the apartment, right up until a stranger walks in, at which point she vanishes completely. Hold her long enough, though, and she will decide you are acceptable. She is a picky eater who snacks on her own schedule and occasionally expresses her feelings about the food situation by throwing up on the floor. On the bright side, she will let you hold her paws, which almost makes up for it.</p>
+          </div>
+          <ul class="cat-quirks">
+            <li>CFA certified</li>
+            <li>Loudest in the house</li>
+            <li>Vanishes for strangers</li>
+            <li>Paw holder</li>
+          </ul>
+        </div>
+      </article>
 
-      <div class="cat-card">
-        <div class="cat-photo-slot">
-          <img src="images/cats/yuna.jpg" alt="Yuna">
+      <article class="cat-profile reveal">
+        <div class="cat-photo"><img src="images/cats/thumbnails/leo.jpg" alt="Leo"></div>
+        <div>
+          <p class="eyebrow">The big one</p>
+          <h2>Leo</h2>
+          <dl class="cat-stats">
+            <div><dt>Born</dt><dd>Halloween 2016</dd></div>
+            <div><dt>Breed</dt><dd>Maine Coon, likely</dd></div>
+            <div><dt>Weight</dt><dd>15 lbs</dd></div>
+          </dl>
+          <div class="cat-bio">
+            <p>Leo arrived in December, presumably because he needed a dramatic entrance. The probable Maine Coon genes explain the 15 pounds, the spectacular long hair, and the attitude. His preferred hobby is sitting against a wall and judging whoever is in the room.</p>
+            <p>Despite appearances, he is actually quite social and will walk up to complete strangers for pets, which is charming right up until you try to pick him up. Do not try to pick him up. Do not try to brush him either. Or clip his nails. There are scars. He still has a playful side, though at his age he prefers to express it on his own terms. He is also particular about his water, which must be cold. Room temperature is not water.</p>
+          </div>
+          <ul class="cat-quirks">
+            <li>Professional wall sitter</li>
+            <li>Friendly with strangers</li>
+            <li>Do not pick up</li>
+            <li>Cold water only</li>
+          </ul>
         </div>
-        <div class="cat-info">
-          <h3 class="cat-name">Yuna</h3>
-          <p class="cat-bio">Born April 6, 2021, Yuna is a certified fancy cat. Literally. She holds a CFA certificate, which she takes very seriously. As a Tonkinese with a natural mink coat, she carries herself with the confidence of someone who knows they are objectively beautiful. She is the loudest and most playful cat in the apartment, right up until a stranger walks in, at which point she vanishes completely. Hold her long enough, though, and she will decide you are acceptable. She is a picky eater who snacks on her own schedule and occasionally expresses her feelings about the food situation by throwing up on the floor. On the bright side, she will let you hold her paws, which almost makes up for it.</p>
-        </div>
-      </div>
+      </article>
 
-      <div class="cat-card">
-        <div class="cat-photo-slot">
-          <img src="images/cats/leo.jpg" alt="Leo">
-        </div>
-        <div class="cat-info">
-          <h3 class="cat-name">Leo</h3>
-          <p class="cat-bio">Born on Halloween 2016, Leo arrived in December, presumably because he needed a dramatic entrance. He is likely a Maine Coon, which explains the 15 pounds, the spectacular long hair, and the attitude. His preferred hobby is sitting against a wall and judging whoever is in the room. Despite appearances, he is actually quite social and will walk up to complete strangers for pets, which is charming right up until you try to pick him up. Do not try to pick him up. Do not try to brush him either. Or clip his nails. There are scars. He does still have a playful side, though at his age he prefers to express it on his own terms. He is also particular about his water, which must be cold. Room temperature is not water. Both he and Yuna agree that vacuums are unacceptable and this is the one thing they will always agree on.</p>
-        </div>
-      </div>
-
+      <p class="cat-note reveal">The one thing they will always agree on: vacuums are unacceptable.</p>
     </div>
-
-    <div class="cat-gallery-section">
-      <h3 class="cat-gallery-title">Gallery</h3>
-      <div id="cat-gallery" class="photo-grid">
-        <!-- Cat photos will appear here once added to images/cats/ and data/photos.json -->
-      </div>
-    </div>
-
   </main>
 
   <footer>
-    <p>&copy; 2025 Brendan Pan &nbsp;&middot;&nbsp; Yuna &amp; Leo approved</p>
+    <div class="wrap footer-inner">
+      <p>&copy; 2026 Brendan Pan &nbsp;&middot;&nbsp; Yuna &amp; Leo approved</p>
+      <ul class="footer-links">
+        <li><a href="mailto:panbrendan@gmail.com">Email</a></li>
+        <li><a href="https://github.com/panbrendan" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/brpan/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>
