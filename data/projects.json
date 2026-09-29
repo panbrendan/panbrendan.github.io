@@ -53,11 +53,11 @@
     "kind": "iOS app",
     "year": "2026",
     "tagline": "Identify and collect every cat breed.",
-    "description": "A Pokédex for cats. Point your camera at any cat, or pick a photo, and AI identifies the breed with a confidence rating and a fun fact. Every breed you find joins your collection; the other 67+ stay as silhouettes until you spot one in the wild.",
+    "description": "A Pokédex for cats. Snap any cat and AI shows the breeds it most resembles, with honest results for mixed-breed moggies. Every breed you find joins your collection with your own photo; the rest stay as silhouettes until you spot one in the wild.",
     "highlights": [
-      "Claude vision breed identification behind a Vercel serverless proxy, so no API key ships in the app",
-      "Breed details covering temperament, lifespan, weight, and origin",
-      "Scan history, milestones, and daily cat-fact notifications"
+      "Claude vision returns the top three breeds with confidence and the features that gave it away",
+      "Rarity tiers, badges, a photo journal with nicknames, and a daily breed quiz with streaks",
+      "The full breed catalogue ships inside the app, so browsing works offline"
     ],
     "tags": ["Expo", "React Native", "TypeScript", "Vercel", "Claude API"],
     "image": "images/projects/catdex.jpg",
