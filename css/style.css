@@ -385,6 +385,8 @@ a:hover .arrow-ne { transform: translate(2px, -2px); }
 
 .bento .card:first-child { grid-column: span 2; }
 .bento .card:first-child .card-media { aspect-ratio: 2.4 / 1; }
+.bento .card:nth-child(2n):last-child { grid-column: span 2; }
+.bento .card:nth-child(2n):last-child .card-media { aspect-ratio: 2.4 / 1; }
 
 .card {
   position: relative;
@@ -1083,8 +1085,10 @@ footer {
   #nav:has(.nav-links.open) { background: var(--bg); border-color: var(--line); }
 
   .bento { grid-template-columns: 1fr; }
-  .bento .card:first-child { grid-column: auto; }
-  .bento .card:first-child .card-media { aspect-ratio: 2.05 / 1; }
+  .bento .card:first-child,
+  .bento .card:nth-child(2n):last-child { grid-column: auto; }
+  .bento .card:first-child .card-media,
+  .bento .card:nth-child(2n):last-child .card-media { aspect-ratio: 2.05 / 1; }
   .feature-gallery img { height: 160px; }
   .cat-mini { grid-template-columns: 96px 1fr; gap: 16px; }
   .cat-mini img { width: 96px; height: 96px; }

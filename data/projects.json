@@ -67,6 +67,31 @@
     ]
   },
   {
+    "name": "Longthink",
+    "featured": true,
+    "kind": "iOS app",
+    "year": "2026",
+    "tagline": "A turn timer for game night.",
+    "description": "Lay your phone flat in the middle of the table. Everyone gets a slice of the screen facing their seat, a brass dial turns to whoever's up, and a tap anywhere passes the turn. At the end of the night, Longthink tells you who really took their time. No account and no server: every game stays on the phone.",
+    "highlights": [
+      "Stopwatch and turn timer, plus a chess clock with a time bank for each player or team",
+      "An end-of-night Reckoning with a turn-by-turn strip, honours like The Deliberator, and a shareable results card",
+      "Built for the table: 2 to 8 seats, snake and reverse turn order, teams, undo, and an auto-pause when you leave the app"
+    ],
+    "tags": ["Expo", "React Native", "TypeScript", "Reanimated"],
+    "image": "images/projects/longthink.jpg",
+    "imageAlt": "Longthink: the app icon, a brass dial over four coloured seats, beside the app name",
+    "gallery": [
+      { "src": "images/projects/longthink-01-table.jpg", "alt": "The table: each player's slice of the screen faces their seat" },
+      { "src": "images/projects/longthink-02-reckoning.jpg", "alt": "The Reckoning: who took their time, turn by turn" },
+      { "src": "images/projects/longthink-03-share-card.jpg", "alt": "A shareable results card with the night's honour" }
+    ],
+    "links": [
+      { "label": "noctispeak.com", "url": "https://noctispeak.com/longthink/" },
+      { "label": "App Store", "url": "https://apps.apple.com/us/app/longthink-game-night-timer/id6817465346" }
+    ]
+  },
+  {
     "name": "Buzzword vs. Share Price",
     "featured": false,
     "kind": "Data visualization",
