@@ -33,7 +33,7 @@
     "description": "You've inherited Hoshi's Capsule Nook, a tiny figure shop in a seaside town. Pull capsules, chase every colour variant, and fill your display cases so visitors drop tips in the jar. Every figure is generated procedurally, and there is no framework or engine underneath, just canvas and ES modules.",
     "highlights": [
       "Procedural chibi figure generator with auto-shading, outlines, and holo effects",
-      "Four areas to explore: town, Whisper Woods, Sunny Tidepools, and a Star Arcade",
+      "77 figures in 11 series across a seaside town, Whisper Woods, an island, a Cloud Garden, and a glowing grotto",
       "Fishing, digging, a claw machine, shop decorating, and a generative WebAudio lullaby"
     ],
     "tags": ["JavaScript", "Canvas", "WebAudio", "Cloudflare Workers"],
@@ -44,7 +44,8 @@
       { "src": "images/projects/capsule-cove-shop.jpg", "alt": "A decorated shop full of figure display cases" }
     ],
     "links": [
-      { "label": "Play it", "url": "https://capsulecove.app" }
+      { "label": "Play it", "url": "https://capsulecove.app" },
+      { "label": "itch.io", "url": "https://noctispeak.itch.io/capsule-cove" }
     ]
   },
   {
