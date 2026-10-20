@@ -155,7 +155,11 @@ if (appGrid || featuresEl) {
         const target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
         if (target) { target.classList.add('in'); target.scrollIntoView(); }
       }
-      if (minorEl) renderInto(minorEl, rest.map(minorCard).join(''));
+      // The archive section only shows when there are non-featured projects
+      if (minorEl) {
+        if (rest.length) renderInto(minorEl, rest.map(minorCard).join(''));
+        else minorEl.closest('section').remove();
+      }
     })
     .catch(console.error);
 }

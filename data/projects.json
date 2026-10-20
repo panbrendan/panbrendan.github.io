@@ -199,27 +199,5 @@
     "links": [
       { "label": "App Store", "url": "https://apps.apple.com/us/app/catdex/id6763668527" }
     ]
-  },
-  {
-    "name": "Buzzword vs. Share Price",
-    "featured": false,
-    "kind": "Data visualization",
-    "year": "",
-    "description": "An interactive narrative visualization exploring how tech buzzwords correlate with company stock price performance, told across multiple scenes.",
-    "tags": ["D3.js", "JavaScript"],
-    "links": [
-      { "label": "View", "url": "https://panbrendan.github.io/416-narrative-viz/" }
-    ]
-  },
-  {
-    "name": "E-Plant Shopping",
-    "featured": false,
-    "kind": "Web app",
-    "year": "",
-    "description": "An e-commerce storefront for browsing and buying plants, with a product catalog and shopping cart.",
-    "tags": ["React", "JavaScript"],
-    "links": [
-      { "label": "View", "url": "https://panbrendan.github.io/e-plantShopping/" }
-    ]
   }
 ]
