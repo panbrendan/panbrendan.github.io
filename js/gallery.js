@@ -57,10 +57,13 @@ function buildGallery(albums) {
     const grid = document.createElement('div');
     grid.className = 'photo-grid';
 
-    album.photos.forEach(filename => {
+    album.photos.forEach(photo => {
+      // Each photo is a filename, or { file, caption } when the filename doesn't make a good caption
+      const filename = typeof photo === 'string' ? photo : photo.file;
       const src = `images/${album.directory}/${filename}`;
       const thumb = `images/${album.directory}/thumbnails/${filename}`;
-      const caption = filename.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ');
+      const caption = photo.caption || filename.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase());
       const index = allPhotos.length;
       allPhotos.push({ src, thumb, caption });
 
@@ -72,11 +75,16 @@ function buildGallery(albums) {
       img.alt = caption;
       img.loading = 'lazy';
       img.decoding = 'async';
-      img.addEventListener('load', () => img.classList.add('loaded'));
+      // Tiles hold a 4:3 placeholder, then take the photo's own shape for the masonry columns
+      const onLoad = () => {
+        item.style.aspectRatio = `${img.naturalWidth} / ${img.naturalHeight}`;
+        img.classList.add('loaded');
+      };
+      img.addEventListener('load', onLoad);
       // Fall back to the full-size image if no thumbnail was generated
       img.addEventListener('error', () => { if (img.src.includes('/thumbnails/')) img.src = src; }, { once: true });
       img.src = thumb;
-      if (img.complete && img.naturalWidth) img.classList.add('loaded');
+      if (img.complete && img.naturalWidth) onLoad();
 
       const cap = document.createElement('span');
       cap.className = 'cap';

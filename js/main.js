@@ -63,20 +63,26 @@ const ext = 'target="_blank" rel="noopener noreferrer"';
 const tagList = tags => `<ul class="tags">${tags.map(t => `<li>${esc(t)}</li>`).join('')}</ul>`;
 const imgPos = p => p.imagePosition ? ` style="object-position:${esc(p.imagePosition)}"` : '';
 const metaLine = p => [p.kind, p.year].filter(Boolean).map(esc).join(' &middot; ');
+const slug = p => p.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+const icon = (p, cls, size) => p.icon
+  ? `<img class="${cls}" src="${esc(p.icon)}" alt="" width="${size}" height="${size}" loading="lazy">`
+  : '';
 
-function featuredCard(p) {
-  const href = p.links[0] ? p.links[0].url : 'projects.html';
-  const external = /^https?:/.test(href);
+// Home: one tile per app; the tile opens its write-up, the pill opens the store
+function appCard(p) {
+  const link = p.links[0];
   return `
-    <a class="card" href="${esc(href)}" ${external ? ext : ''}>
-      <div class="card-media"><img src="${esc(p.image)}" alt="${esc(p.imageAlt)}" loading="lazy"${imgPos(p)}></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="eyebrow">${metaLine(p)}</span></div>
-        <h3 class="card-title">${esc(p.name)} <span class="arrow-ne">${external ? '&nearr;' : '&rarr;'}</span></h3>
-        <p class="card-text">${esc(p.tagline)}</p>
-        ${tagList(p.tags)}
-      </div>
-    </a>`;
+    <article class="app">
+      ${icon(p, 'app-icon', 60)}
+      <p class="app-kind">${esc(p.kind)}</p>
+      <h3 class="app-name"><a href="projects.html#${slug(p)}">${esc(p.name)}</a></h3>
+      <p class="app-tagline">${esc(p.tagline)}</p>
+      ${link ? `<a class="app-store" href="${esc(link.url)}" ${ext}>${esc(link.label)} <span class="arrow-ne">&nearr;</span></a>` : ''}
+    </article>`;
+}
+
+function indexChip(p) {
+  return `<a href="#${slug(p)}">${icon(p, 'chip-icon', 24)}${esc(p.name)}</a>`;
 }
 
 function featureRow(p, i) {
@@ -90,14 +96,19 @@ function featureRow(p, i) {
     : '<p class="feature-note">Links coming soon.</p>';
 
   return `
-    <article class="feature reveal" id="${esc(p.name.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}">
+    <article class="feature reveal" id="${slug(p)}">
       <div class="feature-media">
         <div class="feature-hero"><img src="${esc(p.image)}" alt="${esc(p.imageAlt)}" loading="lazy"${imgPos(p)}></div>
         ${gallery}
       </div>
       <div>
-        <p class="feature-num">${String(i + 1).padStart(2, '0')} &nbsp;/&nbsp; ${metaLine(p)}</p>
-        <h2>${esc(p.name)}</h2>
+        <div class="feature-head">
+          ${icon(p, 'feature-icon', 64)}
+          <div>
+            <p class="feature-num">${String(i + 1).padStart(2, '0')} &nbsp;/&nbsp; ${metaLine(p)}</p>
+            <h2>${esc(p.name)}</h2>
+          </div>
+        </div>
         <p class="feature-tagline">${esc(p.tagline)}</p>
         <p class="feature-desc">${esc(p.description)}</p>
         <ul class="feature-list">${(p.highlights || []).map(h => `<li>${esc(h)}</li>`).join('')}</ul>
@@ -125,18 +136,25 @@ function renderInto(el, html) {
   el.querySelectorAll('.reveal').forEach(reveal);
 }
 
-const featuredGrid = document.getElementById('featured-grid');
+const appGrid = document.getElementById('app-grid');
+const indexEl = document.getElementById('app-index');
 const featuresEl = document.getElementById('project-features');
 const minorEl = document.getElementById('project-minor');
 
-if (featuredGrid || featuresEl) {
+if (appGrid || featuresEl) {
   fetch('data/projects.json')
     .then(r => r.json())
     .then(projects => {
       const featured = projects.filter(p => p.featured);
       const rest = projects.filter(p => !p.featured);
-      if (featuredGrid) renderInto(featuredGrid, featured.map(featuredCard).join(''));
-      if (featuresEl) renderInto(featuresEl, featured.map(featureRow).join(''));
+      if (appGrid) renderInto(appGrid, featured.map(appCard).join(''));
+      if (indexEl) renderInto(indexEl, featured.map(indexChip).join(''));
+      if (featuresEl) {
+        renderInto(featuresEl, featured.map(featureRow).join(''));
+        // Content arrives after load, so honour a #project link once it exists
+        const target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+        if (target) { target.classList.add('in'); target.scrollIntoView(); }
+      }
       if (minorEl) renderInto(minorEl, rest.map(minorCard).join(''));
     })
     .catch(console.error);

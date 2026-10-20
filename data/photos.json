@@ -1,19 +1,57 @@
 [
   {
-    "name": "2024",
-    "directory": "2024",
+    "name": "2026",
+    "directory": "2026",
     "photos": [
-      "sunset.jpg",
-      "lake_needwood.jpg",
-      "christmas_church_xcaret.jpg"
+      { "file": "korcula.jpg", "caption": "Korčula, Croatia" },
+      { "file": "bangkok.jpg", "caption": "Bangkok at dusk" }
     ]
   },
   {
     "name": "2025",
     "directory": "2025",
     "photos": [
+      { "file": "alishan_sunrise.jpg", "caption": "Sunrise over Alishan, Taiwan" },
       "waterlily.jpg",
       "dragonfly.jpg"
+    ]
+  },
+  {
+    "name": "2024",
+    "directory": "2024",
+    "photos": [
+      { "file": "mt_fuji.jpg", "caption": "Mt. Fuji" },
+      { "file": "luray_caverns.jpg", "caption": "Reflections, Luray Caverns" },
+      "sunset.jpg",
+      "lake_needwood.jpg",
+      { "file": "christmas_church_xcaret.jpg", "caption": "Christmas church, Xcaret" }
+    ]
+  },
+  {
+    "name": "2023",
+    "directory": "2023",
+    "photos": [
+      { "file": "chichen_itza.jpg", "caption": "Chichén Itzá" },
+      "cenote.jpg",
+      "axolotls.jpg"
+    ]
+  },
+  {
+    "name": "2022",
+    "directory": "2022",
+    "photos": [
+      "antelope_canyon.jpg",
+      "horseshoe_bend.jpg",
+      "grand_canyon.jpg"
+    ]
+  },
+  {
+    "name": "2021",
+    "directory": "2021",
+    "photos": [
+      { "file": "galapagos_beach.jpg", "caption": "Galápagos beach" },
+      { "file": "beachside_galapagos.jpg", "caption": "Beachside, Galápagos" },
+      { "file": "tide_pools_galapagos.jpg", "caption": "Tide pools, Galápagos" }
     ]
   }
 ]

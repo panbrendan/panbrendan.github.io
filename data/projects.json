@@ -1,8 +1,138 @@
 [
   {
+    "name": "Loomwork",
+    "featured": true,
+    "kind": "Puzzle game · iOS",
+    "year": "2026",
+    "tagline": "Calm nonograms that weave into cloth.",
+    "description": "Nonograms the way they should feel: calm, fair and beautiful. Fill the grid from the number clues to reveal a hidden picture, and every finished picture weaves into a full-colour textile for your Loom gallery. Each puzzle has exactly one solution, and a solver checks that it can be reached by line logic alone, so you never have to guess. No ads, no lives, no nags.",
+    "highlights": [
+      "Over 250 original pixel pictures in 16 packs, from 5×5 up to 40×40 showpieces",
+      "Colour packs where each clue is coloured like its run, plus endless generated textiles up to 50×50",
+      "Hints that explain the next deduction in plain words, a daily puzzle with streaks, widgets, and iCloud sync"
+    ],
+    "tags": ["Expo", "React Native", "Skia", "SwiftUI"],
+    "icon": "images/projects/icons/loomwork.jpg",
+    "image": "images/projects/loomwork.jpg",
+    "imageAlt": "Loomwork: a wall of pixel-art pictures around the app name",
+    "gallery": [
+      { "src": "images/projects/loomwork-01-logic.jpg", "alt": "A nonogram in progress, solved by logic" },
+      { "src": "images/projects/loomwork-02-weave.jpg", "alt": "A finished picture weaving into cloth" },
+      { "src": "images/projects/loomwork-03-loom.jpg", "alt": "The Loom gallery of finished weaving" }
+    ],
+    "links": [
+      { "label": "App Store", "url": "https://apps.apple.com/us/app/loomwork-nonogram-puzzles/id6822596109" },
+      { "label": "Website", "url": "https://noctispeak.com/loomwork/" }
+    ]
+  },
+  {
+    "name": "Out of Sorts",
+    "featured": true,
+    "kind": "Word game · iOS",
+    "year": "2026",
+    "tagline": "A word roguelike set in an old print shop.",
+    "description": "A word game with a roguelike heart, set in an old letterpress shop. Set words from wood type, print them for Points × Ink, and hit each page's quota before your prints run out. Between pages, the Stationer sells dingbats, the ornaments of the printing trade, which bend the scoring rules. Eight chapters print the book, and every third page is a deadline with a twist.",
+    "highlights": [
+      "34 dingbats that fire left to right, so the order you shelve them in matters",
+      "Deadlines like the Censor, who bans a letter, and Catchwords, where each word starts with the last letter of the one before",
+      "A Daily Edition for everyone, five paper stocks to unlock, and a Specimen Book of every word you print"
+    ],
+    "tags": ["Expo", "React Native", "TypeScript", "Reanimated"],
+    "icon": "images/projects/icons/out-of-sorts.jpg",
+    "image": "images/projects/out-of-sorts.jpg",
+    "imageAlt": "Out of Sorts: the title spelled in wood-type tiles on a dark background",
+    "gallery": [
+      { "src": "images/projects/out-of-sorts-01-home.jpg", "alt": "The title screen" },
+      { "src": "images/projects/out-of-sorts-02-scoring.jpg", "alt": "Printing a word for Points times Ink" },
+      { "src": "images/projects/out-of-sorts-03-shop.jpg", "alt": "The Stationer's shop of dingbats" }
+    ],
+    "links": [
+      { "label": "App Store", "url": "https://apps.apple.com/us/app/out-of-sorts-word-roguelike/id6818936954" },
+      { "label": "Website", "url": "https://noctispeak.com/outofsorts/" }
+    ]
+  },
+  {
+    "name": "Yuzu Springs",
+    "featured": true,
+    "kind": "Idle game · iOS",
+    "year": "2026",
+    "tagline": "A cozy hot spring full of capybaras.",
+    "description": "A cozy idle game set in a mountain hot spring where capybaras come to unwind. Splash the springs to earn coins, build and upgrade baths, and hire attendants who keep the steam rising while you're away. All of the art and music is procedural: the whole game is drawn and scored in code, and fits in about 200 KB.",
+    "highlights": [
+      "15 hot-spring stations, from a humble foot bath to the Moonlight Pool and the sky-high Celestial Gate",
+      "19 guests to befriend, including otters, frogs, a kitsune and a red panda",
+      "A weekly Lantern Festival with its own Night Market, and seasons that grow the resort forever"
+    ],
+    "tags": ["TypeScript", "Canvas", "WebAudio", "Capacitor"],
+    "icon": "images/projects/icons/yuzu-springs.jpg",
+    "image": "images/projects/yuzu-springs.jpg",
+    "imageAlt": "Yuzu Springs: capybaras and friends soaking in a mountain hot-spring resort",
+    "gallery": [
+      { "src": "images/projects/yuzu-springs-01-springs.jpg", "alt": "The hot-spring resort" },
+      { "src": "images/projects/yuzu-springs-02-guests.jpg", "alt": "The guestbook of animal guests" },
+      { "src": "images/projects/yuzu-springs-03-festival.jpg", "alt": "The springs at night during the Lantern Festival" }
+    ],
+    "links": [
+      { "label": "App Store", "url": "https://apps.apple.com/us/app/yuzu-springs/id6821215058" },
+      { "label": "Website", "url": "https://noctispeak.com/yuzusprings/" }
+    ]
+  },
+  {
+    "name": "Brightwork",
+    "featured": true,
+    "kind": "Productivity · iOS",
+    "year": "2026",
+    "tagline": "A gentle nudge when it's been a while.",
+    "description": "Some things don't need a to-do list, just a nudge when it's been a while. Brightwork keeps the quiet, recurring things in your life as copper plates on a shelf: watering the plants, calling home, changing the sheets. Each plate slowly dulls as its rhythm runs out, and once you've done the thing, a press and hold makes it shine again. No ads, no account, no subscription.",
+    "highlights": [
+      "A ledger for every plate, with your real pace and how often you kept it bright",
+      "One gentle nudge, at the time you choose, when something comes due",
+      "Copper, brass, bronze and silver finishes that each age their own way, verdigris included"
+    ],
+    "tags": ["Expo", "React Native", "TypeScript", "Reanimated"],
+    "icon": "images/projects/icons/brightwork.jpg",
+    "image": "images/projects/brightwork.jpg",
+    "imageAlt": "Brightwork: the app icon, a copper plate with a sprout, beside the app name",
+    "gallery": [
+      { "src": "images/projects/brightwork-01-shelf.jpg", "alt": "The shelf of copper plates" },
+      { "src": "images/projects/brightwork-02-ledger.jpg", "alt": "A plate's ledger with your real pace" },
+      { "src": "images/projects/brightwork-03-welcome.jpg", "alt": "Picking the first plates for your shelf" }
+    ],
+    "links": [
+      { "label": "App Store", "url": "https://apps.apple.com/us/app/brightwork-last-time/id6819111529" },
+      { "label": "Website", "url": "https://noctispeak.com/brightwork/" }
+    ]
+  },
+  {
+    "name": "Longthink",
+    "featured": true,
+    "kind": "Game night timer · iOS",
+    "year": "2026",
+    "tagline": "A turn timer for game night.",
+    "description": "Lay your phone flat in the middle of the table. Everyone gets a slice of the screen facing their seat, a brass dial turns to whoever's up, and a tap anywhere passes the turn. At the end of the night, Longthink tells you who really took their time. No account and no server: every game stays on the phone.",
+    "highlights": [
+      "Stopwatch and turn timer, plus a chess clock with a time bank for each player or team",
+      "An end-of-night Reckoning with a turn-by-turn strip, honours like The Deliberator, and a shareable results card",
+      "Built for the table: 2 to 8 seats, snake and reverse turn order, teams, undo, and an auto-pause when you leave the app"
+    ],
+    "tags": ["Expo", "React Native", "TypeScript", "Reanimated"],
+    "icon": "images/projects/icons/longthink.jpg",
+    "image": "images/projects/longthink.jpg",
+    "imageAlt": "Longthink: the app icon, a brass dial over four coloured seats, beside the app name",
+    "gallery": [
+      { "src": "images/projects/longthink-01-table.jpg", "alt": "The table: each player's slice of the screen faces their seat" },
+      { "src": "images/projects/longthink-02-reckoning.jpg", "alt": "The Reckoning: who took their time, turn by turn" },
+      { "src": "images/projects/longthink-03-share-card.jpg", "alt": "A shareable results card with the night's honour" }
+    ],
+    "links": [
+      { "label": "App Store", "url": "https://apps.apple.com/us/app/longthink-game-night-timer/id6817465346" },
+      { "label": "Website", "url": "https://noctispeak.com/longthink/" }
+    ]
+  },
+  {
     "name": "Kinma",
     "featured": true,
-    "kind": "iOS & Android app",
+    "kind": "Virtual pet · iOS & Android",
     "year": "2026",
     "tagline": "A pet that eats what you eat.",
     "description": "A tamagotchi you feed with photos of your real meals, and that grows more sociable when you actually eat with friends. Snap a meal and Claude vision identifies the dish and cuisine; start a table and friends join with a QR code. The pet never dies and food is never scored healthy or unhealthy. It just rewards variety and company.",
@@ -12,6 +142,7 @@
       "Deferred deep links, push reminders in the pet's voice, and shared table journals"
     ],
     "tags": ["Expo", "React Native", "Express", "Postgres", "Claude API"],
+    "icon": "images/projects/icons/kinma.jpg",
     "image": "images/projects/kinma.jpg",
     "imageAlt": "Kinma: three round pastel pets on a teal background",
     "gallery": [
@@ -20,8 +151,8 @@
       { "src": "images/projects/kinma-07-retro.jpg", "alt": "Retro LCD pixel-art mode" }
     ],
     "links": [
-      { "label": "kinma.app", "url": "https://kinma.app" },
-      { "label": "App Store", "url": "https://apps.apple.com/us/app/kinma/id6812021338" }
+      { "label": "App Store", "url": "https://apps.apple.com/us/app/kinma/id6812021338" },
+      { "label": "kinma.app", "url": "https://kinma.app" }
     ]
   },
   {
@@ -37,6 +168,7 @@
       "Fishing, digging, a claw machine, shop decorating, and a generative WebAudio lullaby"
     ],
     "tags": ["JavaScript", "Canvas", "WebAudio", "Cloudflare Workers"],
+    "icon": "images/projects/icons/capsule-cove.jpg",
     "image": "images/projects/capsule-cove.jpg",
     "imagePosition": "center top",
     "imageAlt": "Capsule Cove: a pixel-art town with the Capsule Nook shop and cherry trees",
@@ -51,7 +183,7 @@
   {
     "name": "CatDex",
     "featured": true,
-    "kind": "iOS app",
+    "kind": "Cat breed finder · iOS",
     "year": "2026",
     "tagline": "Identify and collect every cat breed.",
     "description": "A Pokédex for cats. Snap any cat and AI shows the breeds it most resembles, with honest results for mixed-breed moggies. Every breed you find joins your collection with your own photo; the rest stay as silhouettes until you spot one in the wild.",
@@ -61,35 +193,11 @@
       "The full breed catalogue ships inside the app, so browsing works offline"
     ],
     "tags": ["Expo", "React Native", "TypeScript", "Vercel", "Claude API"],
+    "icon": "images/projects/icons/catdex.jpg",
     "image": "images/projects/catdex.jpg",
     "imageAlt": "CatDex: a glowing red cat outline beside the app name",
     "links": [
       { "label": "App Store", "url": "https://apps.apple.com/us/app/catdex/id6763668527" }
-    ]
-  },
-  {
-    "name": "Longthink",
-    "featured": true,
-    "kind": "iOS app",
-    "year": "2026",
-    "tagline": "A turn timer for game night.",
-    "description": "Lay your phone flat in the middle of the table. Everyone gets a slice of the screen facing their seat, a brass dial turns to whoever's up, and a tap anywhere passes the turn. At the end of the night, Longthink tells you who really took their time. No account and no server: every game stays on the phone.",
-    "highlights": [
-      "Stopwatch and turn timer, plus a chess clock with a time bank for each player or team",
-      "An end-of-night Reckoning with a turn-by-turn strip, honours like The Deliberator, and a shareable results card",
-      "Built for the table: 2 to 8 seats, snake and reverse turn order, teams, undo, and an auto-pause when you leave the app"
-    ],
-    "tags": ["Expo", "React Native", "TypeScript", "Reanimated"],
-    "image": "images/projects/longthink.jpg",
-    "imageAlt": "Longthink: the app icon, a brass dial over four coloured seats, beside the app name",
-    "gallery": [
-      { "src": "images/projects/longthink-01-table.jpg", "alt": "The table: each player's slice of the screen faces their seat" },
-      { "src": "images/projects/longthink-02-reckoning.jpg", "alt": "The Reckoning: who took their time, turn by turn" },
-      { "src": "images/projects/longthink-03-share-card.jpg", "alt": "A shareable results card with the night's honour" }
-    ],
-    "links": [
-      { "label": "noctispeak.com", "url": "https://noctispeak.com/longthink/" },
-      { "label": "App Store", "url": "https://apps.apple.com/us/app/longthink-game-night-timer/id6817465346" }
     ]
   },
   {
